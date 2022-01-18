@@ -3,6 +3,7 @@ import SideChat from "./SideChat";
 import SideHeader from "./SideHeader";
 
 function SidePanel() {
+  console.log("Poop");
   return (
     <aside>
       <SideHeader />
