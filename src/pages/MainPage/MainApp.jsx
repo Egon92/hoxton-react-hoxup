@@ -1,11 +1,14 @@
 import MainChatSection from "./MainChatSection/MainChatSection";
 import SidePanel from "./SidePanel/SidePanel";
 
-function MainApp() {
+function MainApp(props) {
   return (
     <div className="main-wrapper">
       <SidePanel />
-      <MainChatSection />
+      <MainChatSection
+        // @ts-ignore
+        params={props.params}
+      />
     </div>
   );
 }

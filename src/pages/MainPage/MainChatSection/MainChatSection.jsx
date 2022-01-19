@@ -1,6 +1,6 @@
 import Conversation from "./Conversation/Conversation";
 
-function MainChatSection() {
-  return <Conversation />;
+function MainChatSection(props) {
+  return <Conversation params={props.params} />;
 }
 export default MainChatSection;

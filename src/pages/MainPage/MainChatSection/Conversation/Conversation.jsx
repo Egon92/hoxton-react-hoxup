@@ -2,11 +2,11 @@ import ChatHeader from "./ChatHeader";
 import MessageBox from "./MessageBox";
 import MessageList from "./MessageList";
 
-function Conversation() {
+function Conversation(props) {
   return (
     <main className="conversation">
       <ChatHeader />
-      <MessageList />
+      <MessageList params={props.params} />
       <MessageBox />
     </main>
   );
