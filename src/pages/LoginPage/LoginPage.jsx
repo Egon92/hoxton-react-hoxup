@@ -1,9 +1,9 @@
 import LoginSection from "./LoginSection";
 
-function LoginPage() {
+function LoginPage(props) {
   return (
     <div className="main-wrapper login">
-      <LoginSection />
+      <LoginSection setModal={props.setModal} />
     </div>
   );
 }

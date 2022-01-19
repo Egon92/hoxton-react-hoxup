@@ -1,4 +1,4 @@
-function LoginSection() {
+function LoginSection(props) {
   return (
     <section className="login-section">
       <h2>Choose your user!</h2>
@@ -40,7 +40,10 @@ function LoginSection() {
           </button>
         </li>
         <li>
-          <button className="user-selection">
+          <button
+            className="user-selection"
+            onClick={() => props.setModal("new-user")}
+          >
             <h3>+ Add a new user</h3>
           </button>
         </li>
