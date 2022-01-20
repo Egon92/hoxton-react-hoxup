@@ -1,11 +1,17 @@
 import { useState } from "react";
-import { Navigate, Routes, Route } from "react-router-dom";
+import { Navigate, Routes, Route, useNavigate } from "react-router-dom";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import MainApp from "./pages/MainPage/MainApp";
 import NotFound from "./pages/NotFound";
 
 export default function App() {
+  const [currentUser, setCurrentUser] = useState(null);
   const [modal, setModal] = useState("new-user");
+  const navigate = useNavigate();
+
+  function logIn(user) {}
+  setCurrentUser(user);
+
   return (
     <div className="App">
       <Routes>
