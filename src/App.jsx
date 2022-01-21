@@ -6,7 +6,7 @@ import NotFound from "./pages/NotFound";
 
 export default function App() {
   const [currentUser, setCurrentUser] = useState(null);
-  const [modal, setModal] = useState("new-user");
+  const [modal, setModal] = useState("");
   const navigate = useNavigate();
 
   function logIn(user) {
