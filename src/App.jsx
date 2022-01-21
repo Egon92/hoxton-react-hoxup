@@ -9,15 +9,27 @@ export default function App() {
   const [modal, setModal] = useState("new-user");
   const navigate = useNavigate();
 
-  function logIn(user) {}
-  setCurrentUser(user);
-
+  function logIn(user) {
+    setCurrentUser(user);
+    navigate("/logged-in");
+  }
+  function logOut() {
+    setCurrentUser(null);
+  }
   return (
     <div className="App">
       <Routes>
         <Route index element={<Navigate replace to="/login" />} />
-        <Route path="/login" element={<LoginPage setModal={setModal} />} />
-        <Route path="/logged-in" element={<MainApp />} />
+        <Route
+          path="/login"
+          element={
+            <LoginPage setModal={setModal} logIn={logIn} logOut={logOut} />
+          }
+        />
+        <Route
+          path="/logged-in"
+          element={<MainApp currentUser={currentUser} />}
+        />
         <Route path="/logged-in/:conversationId" element={<MainApp />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

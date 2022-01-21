@@ -11,7 +11,11 @@ function LoginPage(props) {
   }, []);
   return (
     <div className="main-wrapper login">
-      <LoginSection setModal={props.setModal} users={users} />
+      <LoginSection
+        setModal={props.setModal}
+        users={users}
+        logIn={props.logIn}
+      />
     </div>
   );
 }

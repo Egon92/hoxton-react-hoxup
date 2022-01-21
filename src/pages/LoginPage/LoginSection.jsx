@@ -1,3 +1,5 @@
+import LoginPage from "./LoginPage";
+
 function LoginSection(props) {
   console.log(props.users);
   return (
@@ -6,7 +8,12 @@ function LoginSection(props) {
       <ul>
         {props.users.map((user) => (
           <li>
-            <button className="user-selection">
+            <button
+              className="user-selection"
+              onClick={() => {
+                props.logIn(user);
+              }}
+            >
               <img
                 className="avatar"
                 width="50"
